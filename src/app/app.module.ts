@@ -8,6 +8,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LogoutComponent } from './logout/logout.component';
     CarouselComponent,
     LoginComponent,
     LogoutComponent,
+    SignupComponent,
 
   ],
   imports: [

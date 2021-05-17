@@ -9,13 +9,24 @@
   <div class="collapse navbar-collapse" id="navbarMenu">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="login" class="nav-link">Login</a>
+        <a routerLink="login" class="nav-link">Login</a>
       </li>
       <li>
-        <a href="register" class="nav-link">Register</a>
+        <a routerLink="register" class="nav-link">Register</a>
       </li>
+<!--      <span *ngIf="!this.currentUser">-->
+<!--        <li><a routerLink="/signup">Sign Up</a></li>-->
+<!--        <li><a routerLink="/login">Log In</a></li>-->
+<!--      </span>-->
+<!--      <span *ngIf="this.currentUser">-->
+<!--        <li><a routerLink="/logout">Log Out</a></li>-->
+<!--        <li>Hello, {{this.currentUser}}</li>-->
+<!--      </span>-->
     </ul>
   </div>
 </nav>
+<!--<div class="container">-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
 
 
