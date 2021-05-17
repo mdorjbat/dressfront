@@ -1,1 +1,18 @@
-<p>profile works!</p>
+<div class="center">
+  <form>
+    <h2 class="font-custom">Register a User</h2>
+    <div class="spacing"><input  [(ngModel)]="firstName" type="text" name="firstName" placeholder="First Name"/></div>
+    <br>
+    <div class="spacing"><input  [(ngModel)]="lastName" type="text" name="lastName" placeholder="Last Name"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="age" type="number" name="age" placeholder="Age"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="size" type="text" name="size" placeholder="Size"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="gender" type="text" name="gender" placeholder="Gender"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="path" type="text" name="path" placeholder="Image Path"/></div>
+    <br>
+    <div class="spacing"><input (click)="updateProfile()" type="submit" value="Profile"/></div>
+  </form>
+</div>
