@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { SignupComponent } from './signup/signup.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     CarouselComponent,
     LoginComponent,
     LogoutComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
