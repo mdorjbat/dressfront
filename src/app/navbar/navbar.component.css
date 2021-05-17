@@ -1,0 +1,9 @@
+.navbar-nav1{
+  display:flex;
+  direction: rtl;
+  justify-content: flex-start;
+  justify-content: space-around;
+
+  margin-bottom:0;
+  list-style:none
+}
