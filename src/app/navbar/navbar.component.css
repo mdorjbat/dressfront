@@ -1,6 +1,11 @@
 .navbar-custom{
   background-color: aqua;
+
 }
 .btn1{
-  margin: 10px;
+  margin: 30px;
+}
+.font-custom{
+  font-family: 'Pattaya', sans-serif;
+  font-size: xx-large;
 }
