@@ -1,28 +1,25 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light font-custom">
+<nav class="navbar navbar-expand-sm navbar-light bg-secondary font-custom">
   <a class="navbar-brand font-custom" href="#">
-    <img src="assets/brand/goddess1.png" width="60" height="60" class="d-inline-block align-top" alt="">
-    Dress App
+    <img src="assets/brand/goddess1.png" width="60" height="60" class="d-inline-block align-top title-custom" alt="">
+          Dress App
   </a>
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarMenu">
-    <ul class="navbar-nav ml-auto">
-<!--      <li class="nav-item">-->
-<!--        <a routerLink="login" class="nav-link">Login</a>-->
-<!--      </li>-->
-<!--      <li>-->
-<!--        <a routerLink="register" class="nav-link">Register</a>-->
-<!--      </li>-->
-      <span *ngIf="!this.currentUser">
-        <li><a routerLink="/signup" class="nav-link">Sign Up</a></li>
-        <li><a routerLink="/login" class="nav-link">Log In</a></li>
+    <div class="ml-auto" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <span *ngIf="!this.currentUser">
+        <li class="nav-item"><a routerLink="/signup" class="nav-link">Signup</a></li>
+        <li class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
       </span>
-      <span *ngIf="this.currentUser">
-        <li><a routerLink="/logout" class="nav-link">Log Out</a></li>
-        <li>Hello, {{this.currentUser}}</li>
+        <span *ngIf="this.currentUser">
+        <li class="nav-item"><a routerLink="/logout" class="nav-link">Log Out</a></li>
+        <li class="nav-item">Hello, {{this.currentUser}}</li>
       </span>
-    </ul>
+      </ul>
+    </div>
+
   </div>
 </nav>
 <div class="container">
