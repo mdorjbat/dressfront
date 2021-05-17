@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { SignupComponent } from './signup/signup.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -18,13 +19,13 @@ import { SignupComponent } from './signup/signup.component';
     CarouselComponent,
     LoginComponent,
     LogoutComponent,
-    SignupComponent,
-
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

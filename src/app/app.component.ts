@@ -8,4 +8,15 @@ import { UserService} from './services/user.service';
 })
 export class AppComponent {
   title = 'dressfront';
+  currentUser: any;
+
+  constructor(private userService: UserService) { }
+
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngOnInit(): void {
+    this.userService.searchSubject.subscribe(currentUser => {
+      this.currentUser = currentUser;
+      console.log(currentUser);
+    });
+  }
 }

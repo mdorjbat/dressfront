@@ -17,8 +17,10 @@ export class UserService {
   registerUser(newUser): any{
     console.log(newUser);
     return this.http
-      .post(`${herokuUrl}/auth/user/register`, newUser);
+      .post(`${herokuUrl}/auth/user/register`, newUser)
+      .subscribe(response => console.log(response), err => console.log(err));
   }
+
   loginUser(user): void {
     console.log(user);
 
@@ -31,7 +33,7 @@ export class UserService {
         console.log(response, token);
         this.currentUser = user.email;
         this.searchSubject.next(this.currentUser);
-        this.router.navigate(['/clothes']);
+        // this.router.navigate(['/clothes']);
       }, err => console.log(err));
   }
 
