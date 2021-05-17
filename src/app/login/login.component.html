@@ -1,13 +1,13 @@
 <!--<app-navbar></app-navbar>-->
-<div class="container">
+<div class="container center">
   <form >
     <div>
       <h2 class="font-custom">Login a User</h2>
-      <input [(ngModel)]="email" type="text" name="email" placeholder="User Name"/>
+      <div class="spacing"><input [(ngModel)]="email" type="text" name="email" placeholder="User Name"/></div>
       <br>
-      <input [(ngModel)]="password" type="text" name="password" placeholder="Password"/>
+      <div class="spacing"><input [(ngModel)]="password" type="text" name="password" placeholder="Password"/></div>
       <br>
-      <input (click)="loginUser()" type="submit" value="Log In"/>
+      <div class="spacing"><input (click)="loginUser()" type="submit" value="Log In"/></div>
     </div>
   </form>
 </div>

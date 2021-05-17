@@ -2,3 +2,12 @@
   font-family: 'Pattaya', sans-serif;
   font-size: xx-large;
 }
+.center {
+  margin-top: 10%;
+  margin-left: 50%;
+  width: 80%;
+
+}
+.spacing{
+  margin: 1px;
+}
