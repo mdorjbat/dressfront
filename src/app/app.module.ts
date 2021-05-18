@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { SignupComponent } from './signup/signup.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { AddclothesComponent } from './addclothes/addclothes.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     LogoutComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    AddclothesComponent
   ],
   imports: [
     BrowserModule,
