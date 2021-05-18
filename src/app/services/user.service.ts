@@ -33,7 +33,7 @@ export class UserService {
         console.log(response, token);
         this.currentUser = user.email;
         this.searchSubject.next(this.currentUser);
-        // this.router.navigate(['/clothes']);
+        this.router.navigate(['/profile']);
       }, err => console.log(err));
   }
 

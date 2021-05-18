@@ -5,6 +5,7 @@ import {LogoutComponent} from './logout/logout.component';
 import {SignupComponent} from './signup/signup.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {ProfileComponent} from './profile/profile.component';
+import {AddclothesComponent} from './addclothes/addclothes.component';
 
 const routes: Routes = [{
     path: '',
@@ -25,6 +26,10 @@ const routes: Routes = [{
   {
     path: 'profile',
     component: ProfileComponent
+  },
+  {
+    path: 'addclothes',
+    component: AddclothesComponent
   }
 ];
 
