@@ -1,1 +1,22 @@
-<p>addclothes works!</p>
+<div class="center">
+  <form>
+    <h2 class="font-custom">Add clothes</h2>
+    <div class="spacing"><input  [(ngModel)]="clothesType" type="text" name="clothesType" placeholder="Clothes Type"/></div>
+    <br>
+    <div class="spacing"><input  [(ngModel)]="clothesName" type="text" name="clothesName" placeholder="Clothes Name"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="color" type="number" name="color" placeholder="Color"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="size" type="text" name="size" placeholder="Size"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="occasional" type="text" name="occasional" placeholder="Occasional"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="gender" type="text" name="gender" placeholder="Gender"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="layer" type="text" name="layer" placeholder="Layer"/></div>
+    <br>
+    <div class="spacing"><input [(ngModel)]="path" type="text" name="path" placeholder="Image Path"/></div>
+    <br>
+    <div class="spacing"><input (click)="addCloth()" type="submit" value="Submit"/></div>
+  </form>
+</div>

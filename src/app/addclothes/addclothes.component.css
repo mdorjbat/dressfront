@@ -1,0 +1,13 @@
+.font-custom{
+  font-family: 'Pattaya', sans-serif;
+  font-size: xx-large;
+}
+.center {
+  margin-top: 10%;
+  margin-left: 45%;
+  width: 80%;
+
+}
+.spacing{
+  margin: 1px;
+}

@@ -6,6 +6,7 @@ import {SignupComponent} from './signup/signup.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AddclothesComponent} from './addclothes/addclothes.component';
+import {MainpageComponent} from './mainpage/mainpage.component';
 
 const routes: Routes = [{
     path: '',
@@ -30,6 +31,10 @@ const routes: Routes = [{
   {
     path: 'addclothes',
     component: AddclothesComponent
+  },
+  {
+    path: 'mainpage',
+    component: MainpageComponent
   }
 ];
 
