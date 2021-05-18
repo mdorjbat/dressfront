@@ -12,6 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { AddclothesComponent } from './addclothes/addclothes.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AddclothesComponent } from './addclothes/addclothes.component';
     LogoutComponent,
     SignupComponent,
     ProfileComponent,
-    AddclothesComponent
+    AddclothesComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
