@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-secondary font-custom">
   <a class="navbar-brand font-custom" href="">
     <img src="assets/brand/goddess1.png" width="70" height="90" class="d-inline-block title-custom" alt="">
-          Dress App
+          DressUp
   </a>
+  <span *ngIf="this.currentUser">
+  <a class="nav-item">Hello, {{this.currentUser}}</a>
+  </span>
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -14,7 +17,7 @@
         <li class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
       </span>
         <span *ngIf="this.currentUser">
-          <li class="nav-item">Hello, {{this.currentUser}}</li>
+<!--          <li class="nav-item">Hello, {{this.currentUser}}</li>-->
           <li class="nav-item"><a routerLink="/profile" class="nav-link">Profile</a></li>
           <li class="nav-item"><a routerLink="/addclothes" class="nav-link">Add Clothes</a></li>
           <li class="nav-item"><a routerLink="/logout" class="nav-link">Logout</a></li>
