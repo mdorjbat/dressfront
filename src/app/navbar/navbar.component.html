@@ -14,8 +14,10 @@
         <li class="nav-item"><a routerLink="/login" class="nav-link">Login</a></li>
       </span>
         <span *ngIf="this.currentUser">
-        <li class="nav-item"><a routerLink="/logout" class="nav-link">Log Out</a></li>
-        <li class="nav-item">Hello, {{this.currentUser}}</li>
+          <li class="nav-item">Hello, {{this.currentUser}}</li>
+          <li class="nav-item"><a routerLink="/profile" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a routerLink="/logout" class="nav-link">Logout</a></li>
+
       </span>
       </ul>
     </div>

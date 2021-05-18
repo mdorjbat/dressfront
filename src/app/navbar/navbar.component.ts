@@ -9,9 +9,15 @@ import { UserService} from '../services/user.service';
 export class NavbarComponent implements OnInit {
   currentUser: any;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    // set currentUser if server restarts
+    this.currentUser = localStorage.getItem('currentUser') || null;
+    this.userService.searchSubject.subscribe(currentUser => {
+      this.currentUser = currentUser;
+      console.log(currentUser);
+    });
   }
 
 }
