@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -14,9 +15,9 @@ export class ProfileComponent implements OnInit {
   public path: string;
 
   updateProfile(): void{
-
+    this.router.navigate(['/mainpage']);
   }
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-addclothes',
@@ -15,12 +16,12 @@ export class AddclothesComponent implements OnInit {
   public path: string;
   public layer: number;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  addCloth() {
-
+  addCloth(): void {
+    this.router.navigate(['/mainpage']);
   }
 }
