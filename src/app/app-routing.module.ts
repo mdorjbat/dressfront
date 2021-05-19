@@ -7,6 +7,7 @@ import {CarouselComponent} from './carousel/carousel.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AddclothesComponent} from './addclothes/addclothes.component';
 import {MainpageComponent} from './mainpage/mainpage.component';
+import {EditprofileComponent} from './editprofile/editprofile.component';
 
 const routes: Routes = [{
     path: '',
@@ -35,6 +36,10 @@ const routes: Routes = [{
   {
     path: 'mainpage',
     component: MainpageComponent
+  },
+  {
+    path: 'editprofile',
+    component: EditprofileComponent
   }
 ];
 

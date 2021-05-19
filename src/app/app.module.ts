@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { AddclothesComponent } from './addclothes/addclothes.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     SignupComponent,
     ProfileComponent,
     AddclothesComponent,
-    MainpageComponent
+    MainpageComponent,
+    EditprofileComponent
   ],
   imports: [
     BrowserModule,
