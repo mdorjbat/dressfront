@@ -20,6 +20,17 @@ export class ProfileService {
       .get(`${herokuUrl}/api/profile`, requestOptions);
   }
 
+  updateProfile(newProfile): any {
+    console.log(newProfile);
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${token}`
+      }),
+    };
+    return this.http
+      .put(`${herokuUrl}/api/profile/`, newProfile, requestOptions);
+  }
   createProfile(newProfile): any {
     console.log(newProfile);
     const token = localStorage.getItem('token');
