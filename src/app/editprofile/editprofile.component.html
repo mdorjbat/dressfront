@@ -6,7 +6,7 @@
         <div class="card">
           <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
-              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+              <img src="assets/avatar/{{selectedAvatar}}.png" alt="Admin" class="rounded-circle"  width="100" height="100">
               <div class="mt-3">
 <!--                <h4>{{profile.firstName}} {{profile.lastName}}</h4>-->
 
@@ -74,12 +74,21 @@
                 <h6 class="mb-0">Image Path</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                <select name="cars" id="cars">
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="opel">Opel</option>
-                  <option value="audi">Audi</option>
+<!--                <input [(ngModel)]="path" type="text" name="path" placeholder="path"/>-->
+                <select (change)="selectChangeHandler($event)">
+                  <option value = "avatar1">avatar1</option>
+                  <option valu e= "avatar2">avatar2</option>
+                  <option valu e= "avatar3">avatar3</option>
+                  <option valu e= "avatar4">avatar4</option>
+                  <option valu e= "avatar5">avatar5</option>
+                  <option valu e= "avatar6">avatar6</option>
+                  <option valu e= "avatar7">avatar7</option>
+                  <option valu e= "avatar8">avatar8</option>
+                  <option valu e= "avatar9">avatar9</option>
+                  <option valu e= "avatar10">avatar10</option>
                 </select>
+<!--                <p><span>You selected: </span><b>-->
+<!--                  {{selectedAvatar}}</b></p>-->
               </div>
             </div>
           </div>

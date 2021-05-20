@@ -6,11 +6,10 @@
         <div class="card">
           <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
-              <img src="/assets/icon/tshort.png" alt="tshirt" class="rounded-circle" width="150">
+              <img src="assets/avatar/{{profile.path}}.png" alt="Admin" class="rounded-circle"  width="100" height="100">
               <div class="mt-3">
-                <!--                <h4>{{profile.firstName}} {{profile.lastName}}</h4>-->
 
-                <button class="btn btn-dark" (click)="addCloth()">Update</button>
+                <button class="btn btn-dark" (click)="addCloth()">Submit</button>
               </div>
             </div>
           </div>
@@ -21,11 +20,11 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <h6 class="mb-0">First Name</h6>
+                <h6 class="mb-0">Clothes Type</h6>
               </div>
               <div class="col-sm-9 text-secondary">
                 <!--                {{profile.firstName}} {{profile.lastName}}-->
-                <input [(ngModel)]="clothesType" type="text" name="clothestype" placeholder="Type of clothes"/>
+                <input [(ngModel)]="type" type="text" name="clothestype" placeholder="Type of clothes"/>
               </div>
             </div>
             <hr>
@@ -35,19 +34,53 @@
               </div>
               <div class="col-sm-9 text-secondary">
                 <!--                {{this.user}}-->
-                <input [(ngModel)]="clothesName" type="text" name="clothesName" placeholder="Clothes Name"/>
+                <input [(ngModel)]="name" type="text" name="clothesName" placeholder="Clothes Name"/>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <h6 class="mb-0">Color</h6>
+                <h6 class="mb-0">Main Color</h6>
               </div>
               <div class="col-sm-9 text-secondary">
                 <!--                {{profile.age}}-->
-                <input [(ngModel)]="color" type="text" name="color" placeholder="Color"/>
+                <select (change)="selectChangeHandler($event)">
+                  <option valu e= "grey">grey</option>
+                  <option value = "pink">pink</option>
+                  <option valu e= "red">red</option>
+                  <option valu e= "orange">orange</option>
+                  <option valu e= "beige">beige</option>
+                  <option valu e= "yellow">yellow</option>
+                  <option valu e= "green">green</option>
+                  <option valu e= "lightblue">lightblue</option>
+                  <option valu e= "darkblue">darkblue</option>
+                  <option valu e= "purple">purple</option>
+                  <option valu e= "brown">brown</option>
+                  <option valu e= "black">black</option>
+                  <option valu e= "white">white</option>
+                </select>
               </div>
             </div>
+<!--            <hr>-->
+<!--            <div class="row">-->
+<!--              <div class="col-sm-3">-->
+<!--                <h6 class="mb-0">Color One</h6>-->
+<!--              </div>-->
+<!--              <div class="col-sm-9 text-secondary">-->
+<!--                &lt;!&ndash;                {{profile.age}}&ndash;&gt;-->
+<!--                <input [(ngModel)]="color_one" type="text" name="colorOne" placeholder="Color One"/>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <hr>-->
+<!--            <div class="row">-->
+<!--              <div class="col-sm-3">-->
+<!--                <h6 class="mb-0">Color Two</h6>-->
+<!--              </div>-->
+<!--              <div class="col-sm-9 text-secondary">-->
+<!--                &lt;!&ndash;                {{profile.age}}&ndash;&gt;-->
+<!--                <input [(ngModel)]="color_two" type="text" name="colorTwo" placeholder="Color Two"/>-->
+<!--              </div>-->
+<!--            </div>-->
             <hr>
             <div class="row">
               <div class="col-sm-3">
@@ -71,11 +104,11 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <h6 class="mb-0">Occasional</h6>
+                <h6 class="mb-0">Event</h6>
               </div>
               <div class="col-sm-9 text-secondary">
                 <!--                {{profile.gender}}-->
-                <input [(ngModel)]="occasional" type="text" name="occasional" placeholder="Occasional"/>
+                <input [(ngModel)]="event" type="text" name="event" placeholder="Event"/>
               </div>
             </div>
             <hr>
@@ -94,7 +127,7 @@
                 <h6 class="mb-0">Image Path</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                <!--                {{profile.path}}-->
+                <input [(ngModel)]="image_path" type="text" name="path" placeholder="Path"/>
               </div>
             </div>
           </div>
@@ -103,26 +136,3 @@
     </div>
   </div>
 </div>
-
-<!--<div class="center">-->
-<!--  <form>-->
-<!--    <h2 class="font-custom">Add clothes</h2>-->
-<!--    <div class="spacing"><input  [(ngModel)]="clothesType" type="text" name="clothesType" placeholder="Clothes Type"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input  [(ngModel)]="clothesName" type="text" name="clothesName" placeholder="Clothes Name"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input [(ngModel)]="color" type="number" name="color" placeholder="Color"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input [(ngModel)]="size" type="text" name="size" placeholder="Size"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input [(ngModel)]="occasional" type="text" name="occasional" placeholder="Occasional"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input [(ngModel)]="gender" type="text" name="gender" placeholder="Gender"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input [(ngModel)]="layer" type="text" name="layer" placeholder="Layer"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input [(ngModel)]="path" type="text" name="path" placeholder="Image Path"/></div>-->
-<!--    <br>-->
-<!--    <div class="spacing"><input (click)="addCloth()" type="submit" value="Submit"/></div>-->
-<!--  </form>-->
-<!--</div>-->

@@ -14,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AddclothesComponent } from './addclothes/addclothes.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     ProfileComponent,
     AddclothesComponent,
     MainpageComponent,
-    EditprofileComponent
+    EditprofileComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

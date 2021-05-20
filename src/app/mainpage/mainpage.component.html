@@ -1,27 +1,45 @@
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <img src="/assets/avatar/avatar1.png" alt="..." class="img-thumbnail">
-    </div>
-    <div class="col">
-      2 of 2
-    </div>
+<div class="parent"  >
+  <div class="div1" align="center"> Layer 1</div>
+  <div class="div2" align="center"> Layer 2 </div>
+  <div class="div3" align="center"> Layer 3</div>
+  <div class="div4" align="center"> Layer 4</div>
+  <div class="div5"> <app-weather></app-weather> </div>
+  <div class="div6" align="center">
+    <label style="background: {{favColor}}" width="100">Today's color</label>
+    <br>
+    <select (change)="selectColor($event)">
+      <option valu e= "grey">grey</option>
+      <option value = "pink">pink</option>
+      <option valu e= "red">red</option>
+      <option valu e= "orange">orange</option>
+      <option valu e= "beige">beige</option>
+      <option valu e= "yellow">yellow</option>
+      <option valu e= "green">green</option>
+      <option valu e= "lightblue">lightblue</option>
+      <option valu e= "darkblue">darkblue</option>
+      <option valu e= "purple">purple</option>
+      <option valu e= "brown">brown</option>
+      <option valu e= "black">black</option>
+      <option valu e= "white">white</option>
+    </select>
   </div>
-  <div class="row">
-    <div class="col">
-      <select class="selectpicker" size="1">
-        <option selected>Open this</option>
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-      </select>
-    </div>
-    <div class="col">
-      2 of 3
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
+  <div class="div7" align="center"> <img src="/assets/avatar/{{profile.path}}.png" alt="head" width="100" height="100"></div>
+  <div class="div8"align="center"> <img src="/assets/mainpage/{{curtain}}" alt="curtain" ></div>
+  <div class="div9"align="center"> <img src="/assets/mainpage/{{feet}}" alt="feet" width="100" height="50"></div>
+  <div class="div10"align="center">  <img src="/assets/clothes/{{layer1top}}" alt="layer1top" width="200" height="100"></div>
+  <div class="div11"align="center">  <img src="/assets/clothes/{{layer1uppermid}}" alt="layer1uppermid" width="200" height="150"></div>
+  <div class="div12"align="center"> <img src="/assets/clothes/{{layer1upperbottom}}" alt="layer1upperbottom" width="100" height="70"></div>
+  <div class="div13"align="center"> <img src="/assets/clothes/{{layer1lowerbottom}}" alt="layer1lowerbottom" width="150" height="100"></div>
+  <div class="div14"align="center"> <img src="/assets/clothes/{{layer2top}}" alt="layer2top" ></div>
+  <div class="div15"align="center"> <img src="/assets/clothes/{{layer2uppermid}}" alt="layer2uppermid"  width="200" height="150"></div>
+  <div class="div16"align="center">  <img src="/assets/clothes/{{layer2upperbottom}}" alt="layer2upperbottom" width="200" height="150"></div>
+  <div class="div17"align="center"> <img src="/assets/clothes/{{layer2lowerbottom}}" alt="layer2lowerbottom" width="100" height="80"></div>
+  <div class="div18"align="center"> <img src="/assets/clothes/{{layer3top}}" alt="layer3top" width="100" height="50"></div>
+  <div class="div19"align="center"> <img src="/assets/clothes/{{layer3uppermid}}" alt="layer3uppermid" ></div>
+  <div class="div20"align="center"> <img src="/assets/clothes/{{layer3upperbottom}}" alt="layer3upperbottom" ></div>
+  <div class="div21"align="center"> <img src="/assets/clothes/{{layer3lowerbottom}}" alt="layer3lowerbottom" width="100" height="80"></div>
+  <div class="div22"align="center"> <img src="/assets/clothes/{{layer4top}}" alt="layer4top" ></div>
+  <div class="div23"align="center"> <img src="/assets/clothes/{{layer4uppermid}}" alt="layer4uppermid" ></div>
+  <div class="div24"align="center"> <img src="/assets/clothes/{{layer4upperbottom}}" alt="layer4upperbottom" ></div>
+  <div class="div25"align="center"> <img src="/assets/clothes/{{layer4lowerbottom}}" alt="layer4lowerbottom" ></div>
 </div>

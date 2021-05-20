@@ -19,8 +19,14 @@ export class EditprofileComponent implements OnInit {
   public path: string;
   public profile: any;
   public user: string;
+  public value: string;
+  public selectedAvatar: string = 'avatar1';
 
   constructor(private router: Router, private profileService: ProfileService, private http: HttpClient) { }
+
+  selectChangeHandler (event: any) {
+    this.selectedAvatar = event.target.value;
+  }
 
   profileUpdater(): void{
 
@@ -40,7 +46,7 @@ export class EditprofileComponent implements OnInit {
         age : this.age,
         gender : this.gender,
         size : this.size,
-        path : this.path
+        path : this.selectedAvatar
       };
     this.profileService.updateProfile(newProfile).subscribe(responce => {
       console.log(this.profile);
