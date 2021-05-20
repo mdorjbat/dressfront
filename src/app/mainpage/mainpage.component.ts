@@ -86,6 +86,19 @@ export class MainpageComponent implements OnInit {
     this.myEvent = event.target.value;
     const bigEvent = this.myEvent;
     this.clearAllLayers();
+
+
+    switch (bigEvent){
+      case 'beachday':
+          this.layer1upperbottom = 'swimsuit.png';
+          this.layer4lowerbottom = 'beachsandals.png';
+          break;
+
+      default:
+          this.layer1upperbottom = 'underwear.png';
+        break;
+    }
+
     this.clothes.forEach(function(i){
       if (i.event === bigEvent) {
         console.log(i);
