@@ -3,7 +3,9 @@ import { ProfileService} from '../services/profile.service';
 import {Router} from '@angular/router';
 import { ClothesService} from '../services/clothes.service';
 import {ScrollingModule} from '@angular/cdk/scrolling';
-
+import { WeatherComponent} from '../weather/weather.component';
+import { Subject} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-mainpage',
@@ -13,8 +15,12 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 export class MainpageComponent implements OnInit {
   public profile: any;
   public clothes: any;
-  public favColor: string = 'grey';
-  public myEvent: string = '';
+  public favColor = 'grey';
+  public myEvent = '';
+  public temperature: number;
+  WeatherData:any;
+  cityname: string;
+  weather: any;
 
   public head: string;
   public curtain: string;
@@ -40,16 +46,16 @@ export class MainpageComponent implements OnInit {
   public layer4upperbottom: string;
   public layer4lowerbottom: string;
 
-  constructor( private profileService: ProfileService, private clothesService: ClothesService) {
-    this.head = "head200.png";
-    this.curtain = "curtain200.png";
-    this.feet = "feet200.png";
-    this.layer1upperbottom = "underwear.png";
-    this.layer2uppermid = "tshirt.png";
-    this.layer2upperbottom = "shorts.png";
-    this.layer2lowerbottom = "socs.png";
-    this.layer3top = "yellow hat.png";
-    this.layer3lowerbottom = "brown shoes.jpg";
+  constructor( private profileService: ProfileService, private clothesService: ClothesService, private http: HttpClient) {
+    this.head = 'head200.png';
+    this.curtain = 'curtain200.png';
+    this.feet = 'feet200.png';
+    this.layer1upperbottom = 'underwear.png';
+    this.layer2uppermid = 'tshirt.png';
+    this.layer2upperbottom = 'shorts.png';
+    this.layer2lowerbottom = 'socs.png';
+    this.layer3top = 'yellow hat.png';
+    this.layer3lowerbottom = 'brown shoes.jpg';
   }
 
   getProfile(): any {
@@ -65,9 +71,9 @@ export class MainpageComponent implements OnInit {
       console.log(this.clothes);
     });
   }
-  selectColor (event: any) {
+  selectColor(event: any) {
     this.favColor = event.target.value;
-    let color = this.favColor;
+    const color = this.favColor;
     this.clothes.forEach(function(i){
       if (i.color_main === color || i.color_one === color || i.color_two === color) {
         console.log(i);
@@ -75,19 +81,29 @@ export class MainpageComponent implements OnInit {
     });
   }
 
-  selectEvents (event: any) {
+  selectEvents(event: any) {
     this.myEvent = event.target.value;
-    let bigEvent = this.myEvent;
+    const bigEvent = this.myEvent;
+
     this.clothes.forEach(function(i){
       if (i.event === bigEvent) {
         console.log(i);
       }
     });
+    console.log(this.weather.main.temp);
+  }
+
+  findWeather(): void{
+    this.http
+      .get(`http://api.openweathermap.org/data/2.5/weather?q=chicago&appid=b178e98e32735200ac9b04afb56e4832&&units=imperial`)
+      .subscribe(response => this.weather = response);
   }
 
   ngOnInit(): void {
     this.getProfile();
     this.getClothes();
+
+    this.findWeather();
   }
 
 }
