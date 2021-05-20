@@ -15,6 +15,7 @@ import { AddclothesComponent } from './addclothes/addclothes.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { WeatherComponent } from './weather/weather.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { WeatherComponent } from './weather/weather.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

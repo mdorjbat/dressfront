@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileService} from '../services/profile.service';
 import {Router} from '@angular/router';
 import { ClothesService} from '../services/clothes.service';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 
 @Component({
   selector: 'app-mainpage',
