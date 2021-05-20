@@ -74,6 +74,7 @@ export class MainpageComponent implements OnInit {
   selectColor(event: any) {
     this.favColor = event.target.value;
     const color = this.favColor;
+    this.clearAllLayers();
     this.clothes.forEach(function(i){
       if (i.color_main === color || i.color_one === color || i.color_two === color) {
         console.log(i);
@@ -84,7 +85,7 @@ export class MainpageComponent implements OnInit {
   selectEvents(event: any) {
     this.myEvent = event.target.value;
     const bigEvent = this.myEvent;
-
+    this.clearAllLayers();
     this.clothes.forEach(function(i){
       if (i.event === bigEvent) {
         console.log(i);
@@ -99,6 +100,29 @@ export class MainpageComponent implements OnInit {
       .subscribe(response => this.weather = response);
   }
 
+  clearAllLayers():void{
+
+    this.layer1top= '';
+    this.layer1uppermid= '';
+    this.layer1lowermid= '';
+    this.layer1upperbottom= '';
+    this.layer1lowerbottom= '';
+    this.layer2top= '';
+    this.layer2uppermid= '';
+    this.layer2lowermid= '';
+    this.layer2upperbottom= '';
+    this.layer2lowerbottom= '';
+    this.layer3top= '';
+    this.layer3uppermid= '';
+    this.layer3lowermid= '';
+    this.layer3upperbottom= '';
+    this.layer3lowerbottom= '';
+    this.layer4top= '';
+    this.layer4uppermid= '';
+    this.layer4lowermid= '';
+    this.layer4upperbottom= '';
+    this.layer4lowerbottom= '';
+  }
   ngOnInit(): void {
     this.getProfile();
     this.getClothes();
