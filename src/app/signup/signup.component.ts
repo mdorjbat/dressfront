@@ -11,6 +11,7 @@ export class SignupComponent implements OnInit {
   public userName: string;
   public emailAddress: string;
   public password: string;
+
   registerUser(): void {
     const newUser = {userName: this.userName, emailAddress: this.emailAddress, password: this.password};
     this.userService.registerUser(newUser);

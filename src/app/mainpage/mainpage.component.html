@@ -26,21 +26,33 @@
     <br>
     <label width="100">Today's event</label>
     <br>
-    <select (change)="selectEvent($event)">
+    <select (change)="selectEvents($event)">
       <option valu e= ""></option>
       <option value = "haloween">haloween</option>
       <option valu e= "wedding">wedding</option>
       <option valu e= "christmas">cristmas</option>
       <option valu e= "work">work</option>
-      <option valu e= "stpatricsday">stpatricsday</option>
-      <option valu e= "stpatrics">green</option>
     </select>
   </div>
-  <div class="div7" align="center"> <img src="/assets/avatar/{{profile.path}}.png" alt="head" width="100" height="100"></div>
+    <div class="div7" align="center"> <img src="/assets/avatar/{{profile.path}}.png" alt="head" width="100" height="100"></div>
   <div class="div8"align="center"> <img src="/assets/mainpage/{{curtain}}" alt="curtain" ></div>
   <div class="div9"align="center"> <img src="/assets/mainpage/{{feet}}" alt="feet" width="100" height="50"></div>
   <div class="div10"align="center">  <img src="/assets/clothes/{{layer1top}}" alt="layer1top" width="200" height="100"></div>
-  <div class="div11"align="center">  <img src="/assets/clothes/{{layer1uppermid}}" alt="layer1uppermid" width="200" height="150"></div>
+  <div class="div11"align="center">  <img src="/assets/clothes/{{layer1uppermid}}" alt="layer1uppermid" width="200" height="150">
+    <div class="vertical-menu">
+      <a href="#" class="active">Home</a>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+      <a href="#">Link 5</a>
+      <a href="#">Link 6</a>
+      <a href="#">Link 7</a>
+      <a href="#">Link 8</a>
+      <a href="#">Link 9</a>
+      <a href="#">Link 10</a>
+    </div>
+  </div>
   <div class="div12"align="center"> <img src="/assets/clothes/{{layer1upperbottom}}" alt="layer1upperbottom" width="100" height="70"></div>
   <div class="div13"align="center"> <img src="/assets/clothes/{{layer1lowerbottom}}" alt="layer1lowerbottom" width="150" height="100"></div>
   <div class="div14"align="center"> <img src="/assets/clothes/{{layer2top}}" alt="layer2top" ></div>

@@ -66,7 +66,6 @@ export class MainpageComponent implements OnInit {
   selectColor (event: any) {
     this.favColor = event.target.value;
     let color = this.favColor;
-    this.getClothes();
     this.clothes.forEach(function(i){
       if (i.color_main === color || i.color_one === color || i.color_two === color) {
         console.log(i);
@@ -74,8 +73,14 @@ export class MainpageComponent implements OnInit {
     });
   }
 
-  selectEvent (event: any) {
+  selectEvents (event: any) {
     this.myEvent = event.target.value;
+    let bigEvent = this.myEvent;
+    this.clothes.forEach(function(i){
+      if (i.event === bigEvent) {
+        console.log(i);
+      }
+    });
   }
 
   ngOnInit(): void {
