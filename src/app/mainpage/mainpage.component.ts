@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService} from '../services/profile.service';
 import {Router} from '@angular/router';
+import { ClothesService} from '../services/clothes.service';
 
 @Component({
   selector: 'app-mainpage',
@@ -9,7 +10,9 @@ import {Router} from '@angular/router';
 })
 export class MainpageComponent implements OnInit {
   public profile: any;
+  public clothes: any;
   public favColor: string = 'grey';
+  public myEvent: string = '';
 
   public head: string;
   public curtain: string;
@@ -35,7 +38,7 @@ export class MainpageComponent implements OnInit {
   public layer4upperbottom: string;
   public layer4lowerbottom: string;
 
-  constructor( private profileService: ProfileService) {
+  constructor( private profileService: ProfileService, private clothesService: ClothesService) {
     this.head = "head200.png";
     this.curtain = "curtain200.png";
     this.feet = "feet200.png";
@@ -54,12 +57,30 @@ export class MainpageComponent implements OnInit {
     });
   }
 
+  getClothes(): any{
+    this.clothesService.getClothes().subscribe(response => {
+      this.clothes = response;
+      console.log(this.clothes);
+    });
+  }
   selectColor (event: any) {
     this.favColor = event.target.value;
+    let color = this.favColor;
+    this.getClothes();
+    this.clothes.forEach(function(i){
+      if (i.color_main === color || i.color_one === color || i.color_two === color) {
+        console.log(i);
+      }
+    });
+  }
+
+  selectEvent (event: any) {
+    this.myEvent = event.target.value;
   }
 
   ngOnInit(): void {
     this.getProfile();
+    this.getClothes();
   }
 
 }
