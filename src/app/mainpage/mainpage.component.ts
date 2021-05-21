@@ -72,6 +72,9 @@ export class MainpageComponent implements OnInit {
       console.log(this.clothes);
     });
   }
+
+  //This function executes when color is selected
+
   selectColor(event: any) {
     this.favColor = event.target.value;
     const color = this.favColor;
