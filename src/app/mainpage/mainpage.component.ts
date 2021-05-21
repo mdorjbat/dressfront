@@ -58,14 +58,14 @@ export class MainpageComponent implements OnInit {
     this.layer3top = '';
     this.layer3lowerbottom = '';
   }
-
+  //get profile
   getProfile(): any {
     this.profileService.getProfile().subscribe(response => {
       this.profile = response;
       console.log(this.profile);
     });
   }
-
+  //get clothes
   getClothes(): any{
     this.clothesService.getClothes().subscribe(response => {
       this.clothes = response;
