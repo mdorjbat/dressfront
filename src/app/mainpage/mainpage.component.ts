@@ -6,6 +6,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { WeatherComponent} from '../weather/weather.component';
 import { Subject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {isEmpty} from 'rxjs/operators';
 
 @Component({
   selector: 'app-mainpage',
@@ -74,12 +75,53 @@ export class MainpageComponent implements OnInit {
   selectColor(event: any) {
     this.favColor = event.target.value;
     const color = this.favColor;
+
     this.clearAllLayers();
-    this.clothes.forEach(function(i){
-      if (i.color_main === color || i.color_one === color || i.color_two === color) {
-        console.log(i);
-      }
-    });
+
+    if(this.weather.main.temp > 70){
+      this.clothes.forEach((i) => {
+        if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
+          this.layer1upperbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'lightsocks' && i.event === null) {
+          this.layer1lowerbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && (i.type === 't-shirt' || i.type === 'shirt' ) && i.event === null){
+          this.layer2uppermid = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'shorts' && i.event === null){
+          this.layer2upperbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'shoes' && i.layer !== 4 && i.event === null){
+          this.layer3lowerbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'hat' && i.layer !== 4 && i.event === null){
+          this.layer3top = i.image_path;
+        }
+
+      });
+    }else if(this.weather.main.temp > 50){
+
+    }else{
+
+    }
+
+
+
+    // this.clothes.forEach(function(i){
+    //   if (i.color_main === color || i.color_one === color || i.color_two === color) {
+    //     console.log(i);
+    //   }
+    // });
   }
 
   selectEvents(event: any) {
@@ -122,7 +164,7 @@ export class MainpageComponent implements OnInit {
         console.log(i);
       }
     });
-    console.log(this.weather.main.temp);
+    //console.log(this.weather.main.temp);
   }
 
   findWeather(): void{
