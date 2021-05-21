@@ -1,4 +1,4 @@
-#User Stories
+# User Stories
 Primary users are individuals who wants to better manage their clothing depending on the weather or occasion. It can be used as an app on a smart mirror or any device with a browser.
 
 User stories:
@@ -9,7 +9,7 @@ User stories:
 5. A user wants their information secure and inaccessible to the public.
 6. A user wants to have separate accounts from other members of their family
 
-#Approach
+# Approach
 1.	Brainstormed ideas
 2.	Used wireframe to sketch an outline
 3.	Designed a database structure
@@ -31,7 +31,7 @@ User stories:
     f.	Finished logic of clothes selection
     g.	Deployed to Heroku
 
-#Planning
+# Planning
 ERD design of model which demonstrates how the entities of the Clothing API relate to one
 another. This is an overview of the database showing the relationships between the profile, 
 user, and clothing tables. 
@@ -42,7 +42,7 @@ Pivotaltracker was used to plan the workflow and track the progress of the proje
 
 ![img_7.png](img_7.png)
 
-###Wireframe design
+### Wireframe design
 Inital design idea using wireframe. The interface helped visualize what would need to be done
 to complete the project. 
 
@@ -50,7 +50,7 @@ to complete the project.
 
 ![img_3.png](img_3.png)
 
-###Organization of clothing
+### Organization of clothing
 
 Organization of clothing is based on the layer and location on the body. 
 
@@ -65,13 +65,13 @@ Four layers were used:
 
 ![img_5.png](img_5.png)
 
-###Color selection
+### Color selection
 This color scheme was used to determine the colors that would pair well together for the
 clothing.
 
 ![img_6.png](img_6.png)
 
-##Final Product
+**Final Product**
 Landing page contains a navigation bar and image carousel. From there, the user can login
 or create a new account. Once the user is logged in, they can edit their profile and add
 clothes to the database. This app can be used for clothing inspiration, based off of the 
@@ -100,7 +100,7 @@ weather, color, and event for the day.
 1. Register new user
 1. Login to the app
 
-##Tools used
+## Tools used
 * Spring Boot Framework
 * IntelliJ IDEA/Java 11
 * Angular
@@ -136,7 +136,7 @@ frontend utilizing Angular and Spring Boot in order apply what I had learned fro
 Learning ways to develop the project was rewarding seeing the wireframe become a real application
 in the final product and watching my idea materialize. 
 
-##Future Plans
+## Future Plans
 * Add a feature that allows users to analyze their clothing
 * Add a feature that allows clothing to easily be added to the database
 * More testing for backend 
