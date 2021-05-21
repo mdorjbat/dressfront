@@ -78,7 +78,7 @@ export class MainpageComponent implements OnInit {
 
     this.clearAllLayers();
 
-    if(this.weather.main.temp > 70){
+    if(this.weather.main.temp > 85){
       this.clothes.forEach((i) => {
         if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
           this.layer1upperbottom = i.image_path;
@@ -109,9 +109,84 @@ export class MainpageComponent implements OnInit {
         }
 
       });
-    }else if(this.weather.main.temp > 50){
+    }else if(this.weather.main.temp > 75){
+      this.clothes.forEach((i) => {
+        if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
+          this.layer1upperbottom = i.image_path;
+        }
 
+        if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'socks' && i.event === null) {
+          this.layer1lowerbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && (i.type === 't-shirt' || i.type === 'shirt' ) && i.event === null){
+          this.layer2uppermid = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && (i.type === 'sweater' || i.type === 'long shirt' || i.type === 'jacket') && i.event === null){
+          this.layer3uppermid = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'pants' && i.event === null){
+          this.layer3upperbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'shoes' && i.layer !== 4 && i.event === null){
+          this.layer3lowerbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'hat' && i.layer !== 4 && i.event === null){
+          this.layer3top = i.image_path;
+        }
+
+      });
     }else{
+
+      this.clothes.forEach((i) => {
+        if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
+          this.layer1upperbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'socks' && i.event === null) {
+          this.layer1lowerbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && (i.type === 't-shirt' || i.type === 'shirt' ) && i.event === null){
+          this.layer2uppermid = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && (i.type === 'sweater' || i.type === 'long shirt' || i.type === 'jacket') && i.event === null){
+          this.layer3uppermid = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'pants' && i.event === null){
+          this.layer3upperbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'shoes' && i.layer === 4 && i.event === null){
+          this.layer4lowerbottom = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'hat' && i.layer === 4 && i.event === null){
+          this.layer4top = i.image_path;
+        }
+
+        if ((i.color_main === color || i.color_one === color || i.color_two === color)
+          && i.type === 'coat' && i.layer === 4 && i.event === null){
+          this.layer4uppermid = i.image_path;
+        }
+
+      });
 
     }
 
