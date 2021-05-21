@@ -89,3 +89,7 @@ body{
 /*.spacing{*/
 /*  margin: 1px;*/
 /*}*/
+.font-custom1{
+  font-family: 'Pattaya', sans-serif;
+  font-size: x-large;
+}
