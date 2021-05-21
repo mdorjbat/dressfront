@@ -90,10 +90,28 @@ export class MainpageComponent implements OnInit {
 
     switch (bigEvent){
       case 'beachday':
-          this.layer1upperbottom = 'swimsuit.png';
-          this.layer4lowerbottom = 'beachsandals.png';
-          break;
-
+        this.layer1upperbottom = 'swimsuit.png';
+        this.layer2lowerbottom = 'beachsandals.png';
+        break;
+      case 'haloween':
+        this.layer3top = 'haloweenhat.png';
+        this.layer3uppermid = 'haloweenshirt.png';
+        this.layer3upperbottom = 'haloweenpants.png';
+        this.layer3lowerbottom = 'haloweenshoes.png';
+        break;
+      case 'stpatric':
+        this.layer3top = 'stpatrichat.png';
+        this.layer3uppermid = 'stpatriccoat.png';
+        this.layer3upperbottom = 'stpatricpants.png';
+        this.layer3lowerbottom = 'stpatricshoes.png';
+        break;
+      case 'christmas':
+        this.layer4top = 'christmasthat.png';
+        this.layer4uppermid = 'christmastcoat.png';
+        this.layer3lowermid = 'christmastpants.png';
+        this.layer3uppermid = 'christmastsweater.png';
+        this.layer4lowerbottom = 'christmastboots.png';
+        break;
       default:
           this.layer1upperbottom = 'underwear.png';
         break;
