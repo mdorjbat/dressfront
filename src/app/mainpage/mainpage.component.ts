@@ -51,12 +51,12 @@ export class MainpageComponent implements OnInit {
     this.head = 'head200.png';
     this.curtain = 'curtain200.png';
     this.feet = 'feet200.png';
-    this.layer1upperbottom = 'underwear.png';
-    this.layer2uppermid = 'tshirt.png';
-    this.layer2upperbottom = 'shorts.png';
-    this.layer2lowerbottom = 'socs.png';
-    this.layer3top = 'yellow hat.png';
-    this.layer3lowerbottom = 'brown shoes.jpg';
+    this.layer1upperbottom = '';
+    this.layer2uppermid = '';
+    this.layer2upperbottom = '';
+    this.layer2lowerbottom = '';
+    this.layer3top = '';
+    this.layer3lowerbottom = '';
   }
 
   getProfile(): any {
@@ -78,7 +78,7 @@ export class MainpageComponent implements OnInit {
 
     this.clearAllLayers();
 
-    if(this.weather.main.temp > 85){
+    if(this.weather.main.temp > 75){
       this.clothes.forEach((i) => {
         if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
           this.layer1upperbottom = i.image_path;
@@ -109,7 +109,7 @@ export class MainpageComponent implements OnInit {
         }
 
       });
-    }else if(this.weather.main.temp > 75){
+    }else if(this.weather.main.temp > 50){
       this.clothes.forEach((i) => {
         if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
           this.layer1upperbottom = i.image_path;
