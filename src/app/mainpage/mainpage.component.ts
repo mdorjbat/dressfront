@@ -245,10 +245,12 @@ export class MainpageComponent implements OnInit {
     //console.log(this.weather.main.temp);
   }
 
-  findWeather(): void{
+  findWeather(): void {
     this.http
       .get(`http://api.openweathermap.org/data/2.5/weather?q=chicago&appid=b178e98e32735200ac9b04afb56e4832&&units=imperial`)
-      .subscribe(response => this.weather = response);
+      .subscribe(response => {
+        this.weather = response;
+      }, err => console.log(err));
   }
 
   clearAllLayers():void{
