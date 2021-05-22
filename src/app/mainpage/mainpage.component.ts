@@ -81,7 +81,7 @@ export class MainpageComponent implements OnInit {
 
     this.clearAllLayers();
 
-    if(this.weather.main.temp > 75){
+    if(this.weather.main.temp > 90){
       this.clothes.forEach((i) => {
         if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
           this.layer1upperbottom = i.image_path;
@@ -112,7 +112,7 @@ export class MainpageComponent implements OnInit {
         }
 
       });
-    }else if(this.weather.main.temp > 50){
+    }else if(this.weather.main.temp > 80){
       this.clothes.forEach((i) => {
         if ((i.color_main === color || i.color_one === color || i.color_two === color) && i.type === 'underwear' && i.event === null) {
           this.layer1upperbottom = i.image_path;

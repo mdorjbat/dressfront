@@ -96,7 +96,12 @@ weather, color, and event for the day.
 |DELETE| /api/clothes/{id}|Delete a cloth with the supplied id |Private 
 
 ## How to run App
-1. Go to the following link to access app: https://dressfront.herokuapp.com
+1. Go to the following link to access app: 
+   * frontend https://dressfront.herokuapp.com
+   * frontend source https://github.com/mdorjbat/dressfront
+   * backend  https://secret-savannah-30262.herokuapp.com/
+   * backend source https://github.com/mdorjbat/dressapp
+   
 1. Register new user
 1. Login to the app
 
